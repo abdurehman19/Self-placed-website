@@ -45,6 +45,31 @@ export default function Home() {
 
       <JointDivider tone="cream" />
 
+      {/* ---- Meet the craftsman ---- */}
+      <section className="section">
+        <div className="container craftsman">
+          <figure className="craftsman__portrait">
+            <span className="craftsman__frame">
+              <img src="/images/sikandar-portrait.jpg" alt={`${content.name}, wood craftsman, apni workshop mein`} />
+            </span>
+          </figure>
+
+          <div className="craftsman__body">
+            <span className="eyebrow mono">Karigar Se Milein</span>
+            <h2 className="craftsman__title">{content.name}</h2>
+            <p className="craftsman__role mono">
+              {content.title} · {content.experienceYears}+ saal ka tajurba
+            </p>
+            <p className="craftsman__desc">{content.aboutBody[0]}</p>
+            <Link className="section__link" to="/about">
+              Puri kahani padhein →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <JointDivider tone="walnut" flip />
+
       {/* ---- How it works ---- */}
       <section className="section">
         <div className="container">
