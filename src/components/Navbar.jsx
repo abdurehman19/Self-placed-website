@@ -4,11 +4,11 @@ import content from "../data/content.js";
 import "./Navbar.css";
 
 const links = [
-  { to: "/", label: "Ghar" },
-  { to: "/about", label: "Hamare Baare Mein" },
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
   { to: "/rates", label: "Rates" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/contact", label: "Rabta" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {

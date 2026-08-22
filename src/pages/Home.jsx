@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import content from "../data/content.js";
 import JointDivider from "../components/JointDivider.jsx";
+import Hero from '../assets/hero.jpeg'
 import "./Home.css";
 
 export default function Home() {
@@ -50,7 +51,7 @@ export default function Home() {
         <div className="container craftsman">
           <figure className="craftsman__portrait">
             <span className="craftsman__frame">
-              <img src="/images/sikandar-portrait.jpg" alt={`${content.name}, wood craftsman, apni workshop mein`} />
+              <img src={Hero} alt={`${content.name}, wood craftsman, apni workshop mein`} />
             </span>
           </figure>
 
