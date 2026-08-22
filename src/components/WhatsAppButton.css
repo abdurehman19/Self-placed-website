@@ -1,0 +1,19 @@
+.wa-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--canvas);
+  color: var(--cream-light);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(36, 22, 9, 0.28);
+  z-index: 60;
+  transition: transform 0.15s ease;
+}
+
+.wa-fab:hover {
+  transform: translateY(-3px);
+}
