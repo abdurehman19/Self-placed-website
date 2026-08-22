@@ -1,3 +1,12 @@
+/* =========================================================
+   HERO.CSS — FINAL CLEAN VERSION
+   ========================================================= */
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
 .hero {
   background: var(--cream);
   padding: 88px 0 0;
@@ -5,8 +14,52 @@
 }
 
 .hero__inner {
-  max-width: 780px;
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-right: 460px;
 }
+
+
+/* =========================================================
+   HERO IMAGE — RIGHT SIDE
+   ========================================================= */
+
+.hero__inner .main {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.hero__inner .main .craftsman__frame {
+  display: block;
+  width: 400px;
+  height: 480px;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  box-shadow: 0 28px 60px -22px rgba(36, 22, 9, 0.4);
+}
+
+.hero__inner .main .craftsman__frame::before,
+.hero__inner .main .craftsman__frame::after {
+  display: none;
+}
+
+.hero__inner .main .craftsman__frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
 
 .eyebrow {
   display: inline-block;
@@ -39,6 +92,11 @@
   color: var(--walnut-soft);
   max-width: 560px;
 }
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
 
 .hero__actions {
   display: flex;
@@ -77,8 +135,14 @@
   color: var(--cream-light);
 }
 
+
+/* =========================================================
+   HERO STATS
+   ========================================================= */
+
 .hero__stats {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   margin-top: 52px;
   padding-top: 32px;
@@ -102,6 +166,46 @@
   color: var(--walnut-soft);
 }
 
+
+/* =========================================================
+   HERO RULER
+   ========================================================= */
+
+.hero__ruler {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px 14px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--oak);
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  opacity: 0.6;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+  padding: 76px 0;
+  background: var(--cream);
+}
+
+.section--muted {
+  background: var(--cream-light);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.section--dark {
+  background: var(--walnut);
+}
+
 .section__head {
   display: flex;
   flex-wrap: wrap;
@@ -113,6 +217,17 @@
 
 .section__head .section__title {
   margin-bottom: 0;
+}
+
+.section__title {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 600;
+  color: var(--walnut);
+  margin-bottom: 48px;
+}
+
+.section__title--light {
+  color: var(--cream-light);
 }
 
 .section__link {
@@ -134,6 +249,11 @@
   line-height: 1.6;
   color: var(--walnut-soft);
 }
+
+
+/* =========================================================
+   MATERIALS
+   ========================================================= */
 
 .materials {
   display: grid;
@@ -168,11 +288,10 @@
   color: var(--walnut-soft);
 }
 
-.section--muted {
-  background: var(--cream-light);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
+
+/* =========================================================
+   AREAS
+   ========================================================= */
 
 .areas {
   display: flex;
@@ -189,31 +308,21 @@
   background: var(--cream);
 }
 
-.hero__ruler {
-  margin-top: 64px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 24px 14px;
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--oak);
-  font-size: 20px;
-  letter-spacing: 0.02em;
-  opacity: 0.6;
-  overflow: hidden;
-}
 
-/* ---- Meet the craftsman ---- */
+/* =========================================================
+   MEET THE CRAFTSMAN
+   ========================================================= */
+
 .craftsman {
-  display: flex;
+  display: grid;
+  grid-template-columns: 240px 1fr;
   align-items: center;
   gap: 56px;
 }
 
 .craftsman__portrait {
-  flex: 0 0 auto;
   margin: 0;
+  min-width: 0;
 }
 
 .craftsman__frame {
@@ -253,12 +362,12 @@
 .craftsman__frame img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
-  /* filter: grayscale(0.92) sepia(0.45) saturate(1.15) brightness(0.94) contrast(1.12); */
 }
 
 .craftsman__body {
-  flex: 1 1 420px;
+  min-width: 0;
   max-width: 560px;
 }
 
@@ -289,40 +398,10 @@
   margin-top: 20px;
 }
 
-@media (max-width: 760px) {
-  .craftsman {
-    flex-direction: column;
-    text-align: center;
-    gap: 32px;
-  }
-  .craftsman__frame {
-    width: 200px;
-    height: 200px;
-  }
-  .craftsman__body {
-    max-width: 100%;
-  }
-}
 
-.section {
-  padding: 76px 0;
-  background: var(--cream);
-}
-
-.section--dark {
-  background: var(--walnut);
-}
-
-.section__title {
-  font-size: clamp(28px, 4vw, 38px);
-  font-weight: 600;
-  color: var(--walnut);
-  margin-bottom: 48px;
-}
-
-.section__title--light {
-  color: var(--cream-light);
-}
+/* =========================================================
+   PROCESS
+   ========================================================= */
 
 .process {
   display: grid;
@@ -356,6 +435,11 @@
   color: var(--walnut-soft);
 }
 
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
 .services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -381,6 +465,11 @@
   margin-top: 12px;
 }
 
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
 .cta {
   display: flex;
   flex-wrap: wrap;
@@ -399,30 +488,133 @@
   font-size: 15.5px;
 }
 
-@media (max-width: 860px) {
+
+/* =========================================================
+   QUOTE STRIP
+   ========================================================= */
+
+.quote-strip {
+  background: var(--walnut);
+  padding: 56px 0;
+}
+
+.quote-strip__inner {
+  max-width: 760px;
+  text-align: center;
+}
+
+.quote-strip__mark {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 1;
+  color: var(--brass);
+  margin-bottom: 4px;
+}
+
+.quote-strip__text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.5;
+  color: var(--cream-light);
+}
+
+.quote-strip__by {
+  display: block;
+  margin-top: 22px;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--brass);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .hero__inner {
+    padding-right: 0;
+  }
+
+  .hero__inner .main {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+  }
+
+  .hero__inner .main .craftsman__frame {
+    width: 280px;
+    height: 340px;
+  }
+
   .process {
     grid-template-columns: repeat(2, 1fr);
   }
-  .services {
-    grid-template-columns: 1fr;
-  }
+
+  .services,
   .materials {
     grid-template-columns: 1fr;
   }
+
   .hero__ruler {
     display: none;
   }
+
   .hero__stats {
     gap: 28px;
-    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .craftsman {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .craftsman__frame {
+    width: 200px;
+    height: 200px;
+  }
+
+  .craftsman__body {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 560px) {
+  .hero {
+    padding-top: 64px;
+  }
+
+  .hero__title {
+    font-size: 40px;
+  }
+
+  .hero__stats {
+    gap: 20px;
+  }
+
   .process {
     grid-template-columns: 1fr;
   }
+
   .cta {
     padding: 30px 24px;
+  }
+
+  .hero__inner .main .craftsman__frame {
+    width: min(280px, 100%);
+    height: 340px;
   }
 }

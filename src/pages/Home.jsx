@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import content from "../data/content.js";
 import JointDivider from "../components/JointDivider.jsx";
-import Hero from '../assets/hero.jpeg'
+import Hero from "../assets/hero.jpeg";
 import "./Home.css";
 
 export default function Home() {
@@ -16,6 +16,7 @@ export default function Home() {
             <br />
             <em>{content.heroLine2}</em>
           </h1>
+          
           <p className="hero__sub">{content.heroSub}</p>
           <div className="hero__actions">
             <a className="btn btn--primary" href={`https://wa.me/${content.whatsapp}`} target="_blank" rel="noreferrer">
@@ -24,6 +25,11 @@ export default function Home() {
             <Link className="btn btn--ghost" to="/rates">
               Rates dekhein
             </Link>
+          </div>
+          <div className="main">
+             <span className="craftsman__frame">
+              <img src={Hero} alt={`${content.name}, wood craftsman, apni workshop mein`} />
+            </span>
           </div>
 
           <div className="hero__stats">
@@ -46,15 +52,9 @@ export default function Home() {
 
       <JointDivider tone="cream" />
 
-      {/* ---- Meet the craftsman ---- */}
+      {/* ---- Meet the craftsman: text left, portrait right ---- */}
       <section className="section">
         <div className="container craftsman">
-          <figure className="craftsman__portrait">
-            <span className="craftsman__frame">
-              <img src={Hero} alt={`${content.name}, wood craftsman, apni workshop mein`} />
-            </span>
-          </figure>
-
           <div className="craftsman__body">
             <span className="eyebrow mono">Karigar Se Milein</span>
             <h2 className="craftsman__title">{content.name}</h2>
@@ -66,10 +66,29 @@ export default function Home() {
               Puri kahani padhein →
             </Link>
           </div>
+
+          <figure className="craftsman__portrait">
+            <span className="craftsman__frame">
+              <img src={Hero} alt={`${content.name}, wood craftsman, apni workshop mein`} />
+            </span>
+          </figure>
         </div>
       </section>
 
-      <JointDivider tone="walnut" flip />
+      {/* ---- Signature quote strip ---- */}
+      <section className="quote-strip">
+        <div className="container quote-strip__inner">
+          <span className="quote-strip__mark" aria-hidden="true">
+            &ldquo;
+          </span>
+          <p className="quote-strip__text">
+            Jo rate ghar par visit ke baad bataya jaye, wahi final hota hai — koi chupi hui cost nahi.
+          </p>
+          <span className="quote-strip__by mono">— {content.name}</span>
+        </div>
+      </section>
+
+      <JointDivider tone="walnut" />
 
       {/* ---- How it works ---- */}
       <section className="section">
@@ -87,7 +106,7 @@ export default function Home() {
         </div>
       </section>
 
-      <JointDivider tone="walnut" flip />
+      <JointDivider tone="walnut" />
 
       {/* ---- Services ---- */}
       <section className="section section--dark">

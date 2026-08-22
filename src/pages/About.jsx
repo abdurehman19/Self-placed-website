@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import content from "../data/content.js";
+import Hero from '../assets/hero.jpeg'
+
 import "./About.css";
 
 export default function About() {
@@ -7,11 +9,23 @@ export default function About() {
     <div className="about">
       <section className="section">
         <div className="container about__head">
-          <span className="eyebrow mono">Hamare Baare Mein</span>
-          <h1 className="about__title">{content.name}</h1>
-          <p className="about__role mono">
-            {content.title} · {content.experienceYears}+ saal ka tajurba · {content.city}
-          </p>
+          <div className="about__intro">
+            <span className="eyebrow mono">Hamare Baare Mein</span>
+            <h1 className="about__title">{content.name}</h1>
+            <p className="about__role mono">
+              {content.title} · {content.experienceYears}+ saal ka tajurba · {content.city}
+            </p>
+            <p className="about__lede">
+              Har almari, har kitchen aur har darwaza apne haath se banate hain — koi factory line nahi, sirf ek karigar ka kaam.
+            </p>
+          </div>
+
+          <figure className="about__portrait">
+            <span className="about__portrait-frame">
+              <img src={Hero} alt={`${content.name}, wood craftsman, apni workshop mein`} />
+            </span>
+            <figcaption className="mono">{content.name} · apni workshop mein</figcaption>
+          </figure>
         </div>
       </section>
 

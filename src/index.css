@@ -95,3 +95,25 @@ textarea:focus-visible {
     transition-duration: 0.001ms !important;
   }
 }
+/* ---- Section divider: straight line with a small centered brass mark ---- */
+.divider {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.divider__line {
+  flex: 1;
+  height: 1px;
+}
+
+.divider__mark {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brass);
+}
