@@ -55,7 +55,7 @@ export default function Navbar() {
             rel="noreferrer"
             onClick={() => setOpen(false)}
           >
-            WhatsApp Karein
+            Chat on WhatsApp
           </a>
         </nav>
       </div>

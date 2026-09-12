@@ -14,68 +14,74 @@ const content = {
   whatsapp: "923032493740",
   experienceYears: "20",
 
-  // ---- Hero / Intro ----
-  eyebrow: "Karachi · Custom Wood Craft",
-  heroLine1: "20+ saal se lakri ko",
-  heroLine2: "ghar ka hissa banate hain",
+  // ---- Hero / Intro (Home page — English) ----
+  eyebrow: "Karachi · Custom Woodwork",
+  heroLine1: "Two decades of craftsmanship,",
+  heroLine2: "built into your home",
   heroSub:
-    "Almari ho, poori kitchen ho ya ghar ka koi bhi furniture — Sikandar Ali khud ghar aa kar jaiza lete hain, sahi rate batate hain, aur aapki manzoori ke baad apne haath se kaam mukammal karte hain.",
+    "Wardrobes, full kitchens, or any custom furniture — Sikandar Ali visits your home in person, quotes an honest price, and completes every piece with his own hands, only after you approve.",
 
   heroStats: [
-    { value: "20+", label: "Saal ka tajurba" },
-    { value: "9", label: "Kaam ki categories" },
-    { value: "100%", label: "Ghar par visit ke baad rate" },
+    { value: "9", label: "Work categories" },
+    { value: "20+", label: "Years of experience", featured: true },
+    { value: "100%", label: "Quotes given on-site" },
   ],
+
+  // ---- Meet the craftsman (Home page) ----
+  craftsmanEyebrow: "Meet the Craftsman",
+  craftsmanDesc:
+    "Sikandar Ali has been working with wood for over two decades — with his own hands, through his own hard work. No big showroom, no showmanship — just honest work he stands behind, from the first measurement to the final finish.",
+  craftsmanQuote: "The price I quote after seeing your home is final — no hidden costs.",
 
   // ---- How it works (real sequence, so numbered) ----
   process: [
     {
       step: "01",
-      title: "Call ya WhatsApp karein",
-      desc: "Apna kaam bataein — almari, kitchen, darwaza, ya koi bhi furniture.",
+      title: "Call or message",
+      desc: "Tell us what you need — a wardrobe, kitchen, door, or any custom piece.",
     },
     {
       step: "02",
-      title: "Ghar par visit",
-      desc: "Sikandar Ali khud aa kar jagah dekhte hain, naap lete hain aur zaroorat samajhte hain.",
+      title: "Home visit",
+      desc: "Sikandar Ali visits in person, takes measurements, and understands the space.",
     },
     {
       step: "03",
-      title: "Sahi rate",
-      desc: "Lakri ki quality aur design ke hisaab se saaf rate batate hain — koi chupi hui cost nahi.",
+      title: "Honest quote",
+      desc: "A clear price based on the wood quality and design — no hidden costs.",
     },
     {
       step: "04",
-      title: "Manzoori ke baad kaam shuru",
-      desc: "Aap raazi hon to saman khareeda jata hai aur kaam apne haath se shuru hota hai.",
+      title: "Work begins",
+      desc: "Once you approve, materials are purchased and work starts by hand.",
     },
   ],
 
   // ---- Services (home page preview) ----
   services: [
     {
-      name: "Almariyan",
-      desc: "Bedroom aur ghar ke liye custom wardrobes — 2-door se le kar sliding tak.",
+      name: "Wardrobes",
+      desc: "Custom bedroom wardrobes for any home — from simple 2-door units to sliding designs.",
     },
     {
-      name: "Kitchen",
-      desc: "Poore kitchen cabinets, counters aur crockery units, mazboot lakri ke sath.",
+      name: "Kitchens",
+      desc: "Complete kitchen cabinets, counters, and crockery units, built in solid wood.",
     },
     {
-      name: "Darwaze",
-      desc: "Ghar ke andar aur bahar ke liye — solid wood aur panel darwaze.",
+      name: "Doors",
+      desc: "Interior and exterior doors — solid wood and panel designs.",
     },
     {
-      name: "Bed & Furniture",
-      desc: "Bed, dressing table, sofa frame aur ghar ka baaqi furniture.",
+      name: "Beds & Furniture",
+      desc: "Beds, dressing tables, sofa frames, and the rest of your home furniture.",
     },
   ],
 
   materials: [
-    { name: "Sheesham", desc: "Sab se mazboot aur lambe waqt tak chalne wali lakri — premium furniture ke liye." },
-    { name: "Deodar (Diyar)", desc: "Halki aur deemak-resistant, darwazon aur frames ke liye behtareen." },
-    { name: "Plywood / MDF", desc: "Kam budget mein achi finishing — almari aur kitchen ke andar ke hisso ke liye." },
-    { name: "Partal / Kail", desc: "Darmiyani range ka kaam — mazbooti aur cost ka acha balance." },
+    { name: "Sheesham", desc: "The strongest, longest-lasting wood — ideal for premium furniture." },
+    { name: "Deodar (Diyar)", desc: "Lightweight and termite-resistant — excellent for doors and frames." },
+    { name: "Plywood / MDF", desc: "Budget-friendly with a clean finish — used inside wardrobes and kitchens." },
+    { name: "Partal / Kail", desc: "Mid-range wood — a good balance of strength and cost." },
   ],
 
   // ---- About page ----
@@ -168,7 +174,7 @@ const content = {
   ],
 
   // ---- Service areas ----
-  areas: ["Gulshan-e-Iqbal", "Nazimabad", "North Karachi", "Korangi", "Malir", "Federal B Area", "Gulistan-e-Johar", "Aur poore Karachi mein"],
+  areas: ["Gulshan-e-Iqbal", "Nazimabad", "North Karachi", "Korangi", "Malir", "Federal B Area", "Gulistan-e-Johar", "And across Karachi"],
 };
 
 export default content;

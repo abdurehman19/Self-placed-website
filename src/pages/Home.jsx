@@ -16,25 +16,19 @@ export default function Home() {
             <br />
             <em>{content.heroLine2}</em>
           </h1>
-          
           <p className="hero__sub">{content.heroSub}</p>
           <div className="hero__actions">
             <a className="btn btn--primary" href={`https://wa.me/${content.whatsapp}`} target="_blank" rel="noreferrer">
-              WhatsApp par baat karein
+              Chat on WhatsApp
             </a>
             <Link className="btn btn--ghost" to="/rates">
-              Rates dekhein
+              View Rates
             </Link>
-          </div>
-          <div className="main">
-             <span className="craftsman__frame">
-              <img src={Hero} alt={`${content.name}, wood craftsman, apni workshop mein`} />
-            </span>
           </div>
 
           <div className="hero__stats">
             {content.heroStats.map((s) => (
-              <div className="hero__stat" key={s.label}>
+              <div className={`hero__stat ${s.featured ? "hero__stat--featured" : ""}`} key={s.label}>
                 <span className="hero__stat-value mono">{s.value}</span>
                 <span className="hero__stat-label">{s.label}</span>
               </div>
@@ -56,20 +50,20 @@ export default function Home() {
       <section className="section">
         <div className="container craftsman">
           <div className="craftsman__body">
-            <span className="eyebrow mono">Karigar Se Milein</span>
+            <span className="eyebrow mono">{content.craftsmanEyebrow}</span>
             <h2 className="craftsman__title">{content.name}</h2>
             <p className="craftsman__role mono">
-              {content.title} · {content.experienceYears}+ saal ka tajurba
+              {content.title} · {content.experienceYears}+ years of experience
             </p>
-            <p className="craftsman__desc">{content.aboutBody[0]}</p>
+            <p className="craftsman__desc">{content.craftsmanDesc}</p>
             <Link className="section__link" to="/about">
-              Puri kahani padhein →
+              Read more about {content.name} →
             </Link>
           </div>
 
           <figure className="craftsman__portrait">
             <span className="craftsman__frame">
-              <img src={Hero} alt={`${content.name}, wood craftsman, apni workshop mein`} />
+              <img src={Hero} alt={`${content.name}, wood craftsman`} />
             </span>
           </figure>
         </div>
@@ -81,9 +75,7 @@ export default function Home() {
           <span className="quote-strip__mark" aria-hidden="true">
             &ldquo;
           </span>
-          <p className="quote-strip__text">
-            Jo rate ghar par visit ke baad bataya jaye, wahi final hota hai — koi chupi hui cost nahi.
-          </p>
+          <p className="quote-strip__text">{content.craftsmanQuote}</p>
           <span className="quote-strip__by mono">— {content.name}</span>
         </div>
       </section>
@@ -93,7 +85,7 @@ export default function Home() {
       {/* ---- How it works ---- */}
       <section className="section">
         <div className="container">
-          <h2 className="section__title">Kaam kaise hota hai</h2>
+          <h2 className="section__title">How It Works</h2>
           <div className="process">
             {content.process.map((p) => (
               <div className="process__item" key={p.step}>
@@ -106,15 +98,15 @@ export default function Home() {
         </div>
       </section>
 
-      <JointDivider tone="walnut" />
+      <JointDivider tone="walnut" flip />
 
       {/* ---- Services ---- */}
       <section className="section section--dark">
         <div className="container">
           <div className="section__head">
-            <h2 className="section__title section__title--light">Kaam ke daaire</h2>
+            <h2 className="section__title section__title--light">What We Build</h2>
             <Link className="section__link" to="/rates">
-              Poori rate list dekhein →
+              See full price list →
             </Link>
           </div>
           <div className="services">
@@ -133,9 +125,9 @@ export default function Home() {
       {/* ---- Materials ---- */}
       <section className="section">
         <div className="container">
-          <h2 className="section__title">Lakri ki quality</h2>
+          <h2 className="section__title">Wood Quality</h2>
           <p className="section__sub">
-            Kaam ki nature aur budget ke hisaab se sahi lakri chuni jaati hai — ghar par visit ke waqt saath mil kar tay karte hain.
+            The right wood is chosen based on the job and your budget — decided together during the home visit.
           </p>
           <div className="materials">
             {content.materials.map((m) => (
@@ -154,7 +146,7 @@ export default function Home() {
       {/* ---- Service areas ---- */}
       <section className="section section--muted">
         <div className="container">
-          <h2 className="section__title">{content.city} mein kahan kaam karte hain</h2>
+          <h2 className="section__title">Areas We Serve in {content.city}</h2>
           <div className="areas">
             {content.areas.map((a) => (
               <span className="areas__pill mono" key={a}>
@@ -169,15 +161,15 @@ export default function Home() {
       <section className="section">
         <div className="container cta">
           <div>
-            <h2 className="section__title">Kaam shuru karwana hai?</h2>
-            <p className="cta__sub">Rate janne ke liye call ya WhatsApp karein — koi obligation nahi.</p>
+            <h2 className="section__title">Ready to Get Started?</h2>
+            <p className="cta__sub">Call or message on WhatsApp to get your quote — no obligation.</p>
           </div>
           <div className="hero__actions">
             <a className="btn btn--primary" href={`tel:${content.phone.replace(/-/g, "")}`}>
-              Call karein
+              Call Now
             </a>
             <Link className="btn btn--ghost" to="/gallery">
-              Kaam dekhein
+              See Our Work
             </Link>
           </div>
         </div>

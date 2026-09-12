@@ -15,12 +15,12 @@ export default function Footer() {
             {content.phone}
           </a>
           <a href={`https://wa.me/${content.whatsapp}`} target="_blank" rel="noreferrer">
-            WhatsApp par likhein
+            Message on WhatsApp
           </a>
         </div>
       </div>
       <div className="container footer__bottom">
-        <span>© {new Date().getFullYear()} {content.name}. Sab haqooq mehfooz.</span>
+        <span>© {new Date().getFullYear()} {content.name}. All rights reserved.</span>
       </div>
     </footer>
   );
