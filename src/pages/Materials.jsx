@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import content from "../data/content.js";
 import MaterialSwatch from "../components/MaterialSwatch.jsx";
+import SheetColorBook from "../components/SheetColorBook.jsx";
 import "./Materials.css";
 
 export default function Materials() {
@@ -87,7 +88,26 @@ export default function Materials() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
 
+      {/* ---- Sheet colour book: click a colour to see its details ---- */}
+      <section className="section section--muted">
+        <div className="container">
+          <span className="eyebrow mono">Sheet Colour Book</span>
+          <h2 className="materials-page__title materials-page__title--small">Pick a Colour, See the Sheet</h2>
+          <p className="materials-page__note">
+            {content.sheetColors.length} laminate/sunmica colours used on Karachi wardrobes, kitchens, and doors — tap
+            any swatch to see its finish, price, and best use.
+          </p>
+          <div className="sheet-book-wrap">
+            <SheetColorBook />
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <div className="rates__cta">
             <p>Not sure which material fits your budget and needs? Ask during your free home visit.</p>
             <Link className="btn btn--primary" to="/contact">

@@ -5,6 +5,11 @@
   color: var(--walnut);
 }
 
+.materials-page__title--small {
+  font-size: clamp(26px, 4vw, 36px);
+  margin-top: 14px;
+}
+
 .materials-page__note {
   margin-top: 16px;
   max-width: 680px;
@@ -241,4 +246,8 @@
   .material-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.sheet-book-wrap {
+  margin-top: 36px;
 }

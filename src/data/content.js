@@ -358,6 +358,43 @@ const content = {
       swatch: "polish",
     },
   ],
+
+  // ---- Sheet colour book: laminate/sunmica colours, click-to-view detail ----
+  sheetColorFamilies: ["Sab", "White & Light", "Wood Grain", "Black & Grey", "Solid Colours", "Marble & Metallic"],
+
+  sheetColors: [
+    // White & Light
+    { code: "SNM-01", name: "Pearl White", family: "White & Light", finish: "Glossy", swatch: "solid", hex: "#f7f4ee", price: "1,800 – 2,400", bestFor: "Kitchen shutters and wardrobes — bright and easy to match with any interior." },
+    { code: "SNM-02", name: "Ivory White", family: "White & Light", finish: "Matte", swatch: "solid", hex: "#f2ead9", price: "1,200 – 1,600", bestFor: "Wardrobe interiors and ceilings — soft, warm white without the glare." },
+    { code: "SNM-03", name: "Cream", family: "White & Light", finish: "Matte", swatch: "solid", hex: "#ecdfc0", price: "1,200 – 1,600", bestFor: "Bedroom wardrobes — a warm neutral that hides daily marks well." },
+    { code: "SNM-04", name: "Beige", family: "White & Light", finish: "Matte", swatch: "solid", hex: "#ddc9a3", price: "1,200 – 1,700", bestFor: "Living room units — pairs easily with most furniture colours." },
+
+    // Wood Grain
+    { code: "SNM-05", name: "Oak Wood", family: "Wood Grain", finish: "Textured", swatch: "wood", tones: ["#c9a06a", "#dab883", "#b78c54"], price: "1,600 – 2,200", bestFor: "Wardrobes and doors — a light, natural wood look." },
+    { code: "SNM-06", name: "Walnut Wood", family: "Wood Grain", finish: "Matte", swatch: "wood", tones: ["#5a3a24", "#6f4a30", "#432c1c"], price: "1,700 – 2,400", bestFor: "TV units and bedroom furniture — a classic, warm dark wood look." },
+    { code: "SNM-07", name: "Teak Wood", family: "Wood Grain", finish: "Textured", swatch: "wood", tones: ["#8a5a34", "#a06a37", "#6f4526"], price: "1,700 – 2,300", bestFor: "Doors and wardrobe fronts — rich mid-brown, very popular in Karachi homes." },
+    { code: "SNM-08", name: "Wenge", family: "Wood Grain", finish: "Matte", swatch: "wood", tones: ["#2e211a", "#3c2b21", "#211712"], price: "1,800 – 2,500", bestFor: "Modern kitchens and TV units — a deep, almost-black wood finish." },
+    { code: "SNM-09", name: "Rosewood", family: "Wood Grain", finish: "Glossy", swatch: "wood", tones: ["#5c2a24", "#7a3a30", "#431e1a"], price: "1,900 – 2,600", bestFor: "Dining tables and feature panels — a rich reddish-brown with shine." },
+    { code: "SNM-10", name: "Cherry Wood", family: "Wood Grain", finish: "Glossy", swatch: "wood", tones: ["#7a2e22", "#96402c", "#5c2018"], price: "1,900 – 2,600", bestFor: "Dressing tables and cabinets — warm reddish tone with a glossy finish." },
+    { code: "SNM-11", name: "Chocolate Brown", family: "Wood Grain", finish: "Matte", swatch: "solid", hex: "#4a2e1e", price: "1,300 – 1,800", bestFor: "Kitchen base cabinets — flat brown, hides scuffs well." },
+
+    // Black & Grey
+    { code: "SNM-12", name: "Charcoal Black", family: "Black & Grey", finish: "Matte", swatch: "solid", hex: "#211a14", price: "1,500 – 2,000", bestFor: "Modern kitchen shutters and feature panels." },
+    { code: "SNM-13", name: "Matte Black", family: "Black & Grey", finish: "Matte", swatch: "solid", hex: "#1a1a1a", price: "1,600 – 2,100", bestFor: "TV units and study tables — bold, contemporary look." },
+    { code: "SNM-14", name: "Steel Grey", family: "Black & Grey", finish: "Glossy", swatch: "solid", hex: "#7d7d7a", price: "1,700 – 2,200", bestFor: "Kitchen cabinets — pairs well with steel appliances and fittings." },
+    { code: "SNM-15", name: "Ash Grey", family: "Black & Grey", finish: "Matte", swatch: "solid", hex: "#a9a6a0", price: "1,300 – 1,800", bestFor: "Wardrobes and doors — a soft neutral that suits most rooms." },
+
+    // Solid Colours
+    { code: "SNM-16", name: "Sky Blue", family: "Solid Colours", finish: "Glossy", swatch: "solid", hex: "#5b83a6", price: "1,400 – 1,900", bestFor: "Children's room wardrobes and study units." },
+    { code: "SNM-17", name: "Bottle Green", family: "Solid Colours", finish: "Matte", swatch: "solid", hex: "#2f4a34", price: "1,400 – 1,900", bestFor: "Feature panels and accent cabinet doors." },
+    { code: "SNM-18", name: "Maroon", family: "Solid Colours", finish: "Glossy", swatch: "solid", hex: "#6b1f2a", price: "1,400 – 1,900", bestFor: "Bedroom wardrobes — a warm, rich accent colour." },
+    { code: "SNM-19", name: "Mustard Yellow", family: "Solid Colours", finish: "Matte", swatch: "solid", hex: "#c9962e", price: "1,400 – 1,900", bestFor: "Kids' furniture and accent shelving." },
+
+    // Marble & Metallic
+    { code: "SNM-20", name: "White Marble", family: "Marble & Metallic", finish: "Glossy", swatch: "marble-light", price: "2,200 – 3,000", bestFor: "Kitchen counters and TV unit backdrops — a stone look without the weight." },
+    { code: "SNM-21", name: "Grey Marble", family: "Marble & Metallic", finish: "Glossy", swatch: "marble-dark", price: "2,200 – 3,000", bestFor: "Modern kitchen islands and bathroom cabinet fronts." },
+    { code: "SNM-22", name: "Metallic Silver", family: "Marble & Metallic", finish: "Glossy", swatch: "metallic", price: "2,000 – 2,800", bestFor: "Modern TV units and accent panels — a sleek metallic shine." },
+  ],
 };
 
 export default content;
