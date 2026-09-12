@@ -1,0 +1,244 @@
+.materials-page__title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 600;
+  margin-top: 18px;
+  color: var(--walnut);
+}
+
+.materials-page__note {
+  margin-top: 16px;
+  max-width: 680px;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--walnut-soft);
+}
+
+/* ---- Sources ---- */
+.sources {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-bottom: 8px;
+}
+
+.sources__item {
+  display: flex;
+  gap: 14px;
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px;
+}
+
+.sources__dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brass);
+  margin-top: 6px;
+}
+
+.sources__item h3 {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--walnut);
+}
+
+.sources__item p {
+  margin-top: 6px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--walnut-soft);
+}
+
+/* ---- Filters (shared pattern with Rates/Gallery) ---- */
+.materials-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 44px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.materials-page__filter {
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  color: var(--walnut-soft);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 20px;
+  transition: all 0.15s ease;
+}
+
+.materials-page__filter:hover {
+  border-color: var(--oak);
+  color: var(--walnut);
+}
+
+.materials-page__filter.is-active {
+  background: var(--walnut);
+  border-color: var(--walnut);
+  color: var(--cream-light);
+}
+
+.materials-page__group {
+  margin-bottom: 48px;
+}
+
+.materials-page__group-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--oak-deep);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--brass);
+  display: inline-block;
+}
+
+/* ---- Material cards ---- */
+.material-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.material-card {
+  background: var(--cream-light);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.material-card:hover {
+  box-shadow: 0 10px 24px rgba(36, 22, 9, 0.12);
+  transform: translateY(-3px);
+}
+
+.material-card__body {
+  padding: 18px 20px 20px;
+}
+
+.material-card__body h3 {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--walnut);
+}
+
+.material-card__desc {
+  margin-top: 8px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--walnut-soft);
+}
+
+.material-card__price {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--oak-deep);
+}
+
+.material-card__price span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--walnut-soft);
+}
+
+.material-card__where {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--walnut-soft);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ---- Swatches ---- */
+.swatch {
+  width: 100%;
+  height: 96px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.swatch--wood {
+  height: 96px;
+}
+
+.swatch--board {
+  display: flex;
+  align-items: flex-end;
+}
+
+.swatch__edge {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: rgba(36, 22, 9, 0.18);
+}
+
+.swatch--board-block {
+  display: flex;
+}
+
+.swatch--board-block span {
+  flex: 1;
+}
+
+.swatch--particle {
+  background: #e2d4b8;
+  background-image: radial-gradient(rgba(124, 79, 39, 0.35) 1px, transparent 1.5px),
+    radial-gradient(rgba(124, 79, 39, 0.25) 1px, transparent 1.5px);
+  background-size: 9px 9px, 13px 13px;
+  background-position: 0 0, 5px 6px;
+}
+
+.swatch--chips {
+  display: flex;
+  height: 96px;
+}
+
+.swatch--chips span {
+  flex: 1;
+}
+
+.swatch--gloss {
+  background: linear-gradient(135deg, #8a2f2a, #a6432f 55%, #8a2f2a);
+  position: relative;
+}
+
+.swatch__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.35) 48%, transparent 66%);
+}
+
+.swatch--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+  color: var(--oak-deep);
+}
+
+@media (max-width: 980px) {
+  .sources {
+    grid-template-columns: 1fr;
+  }
+  .material-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .material-grid {
+    grid-template-columns: 1fr;
+  }
+}
