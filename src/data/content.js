@@ -175,6 +175,189 @@ const content = {
 
   // ---- Service areas ----
   areas: ["Gulshan-e-Iqbal", "Nazimabad", "North Karachi", "Korangi", "Malir", "Federal B Area", "Gulistan-e-Johar", "And across Karachi"],
+
+  // ---- Materials catalog page: sheets, boards, hardware used in woodwork ----
+  // Prices researched from Karachi's timber/hardware markets — these move
+  // with the market daily, so treat them as an approximate guide.
+  materialsNote:
+    "Sheet, board, and hardware prices change often with the market — these are researched approximate rates to help you budget. Sikandar Ali confirms exact material cost at the time of purchase, after your quote is approved.",
+
+  materialSources: [
+    { name: "Timber Market (Old Haji Camp)", detail: "Siddiq Wahab Road — solid wood, plywood, MDF, block board" },
+    { name: "Marriott Road & Jodia Bazar", detail: "Board and decorative laminate (sunmica) suppliers" },
+    { name: "Saddar Hardware Markets", detail: "Hinges, channels, handles, locks, and fittings" },
+  ],
+
+  materialCategories: ["Sab", "Timber", "Plywood & Boards", "Laminate Sheets", "Veneer", "PVC & Acrylic", "Hardware", "Adhesives & Polish"],
+
+  materialCatalog: [
+    // Timber
+    {
+      category: "Timber",
+      name: "Sheesham (Sheesham Wood)",
+      desc: "The strongest and longest-lasting solid wood — used for premium wardrobes, doors, and furniture that needs to last decades.",
+      price: "2,200 – 3,500",
+      unit: "per cubic ft",
+      where: "Timber Market (Old Haji Camp)",
+      swatch: "wood-sheesham",
+    },
+    {
+      category: "Timber",
+      name: "Deodar (Diyar)",
+      desc: "Naturally oily and termite-resistant — Pakistan's most trusted wood for doors, window frames, and outdoor-facing furniture.",
+      price: "1,800 – 2,800",
+      unit: "per cubic ft",
+      where: "Timber Market (Old Haji Camp)",
+      swatch: "wood-deodar",
+    },
+    {
+      category: "Timber",
+      name: "Partal / Kail (Pine)",
+      desc: "A mid-range softwood — good strength for the price, commonly used inside cabinets and for shelving.",
+      price: "900 – 1,500",
+      unit: "per cubic ft",
+      where: "Timber Market (Old Haji Camp)",
+      swatch: "wood-pine",
+    },
+
+    // Plywood & Boards
+    {
+      category: "Plywood & Boards",
+      name: "Commercial Plywood (8x4 ft)",
+      desc: "Standard plywood for cabinet bodies and general carpentry. 12–18mm thickness covers most furniture work.",
+      price: "4,000 – 5,500",
+      unit: "per sheet",
+      where: "Timber Market / Marriott Road",
+      swatch: "board-ply",
+    },
+    {
+      category: "Plywood & Boards",
+      name: "Marine / BWR Plywood (8x4 ft)",
+      desc: "Water-resistant grade — used for kitchens, bathroom cabinets, and anywhere moisture is a concern.",
+      price: "6,000 – 8,000",
+      unit: "per sheet",
+      where: "Timber Market / Marriott Road",
+      swatch: "board-marine",
+    },
+    {
+      category: "Plywood & Boards",
+      name: "MDF Board / Lasani (8x4 ft)",
+      desc: "Smooth, budget-friendly board — the most common choice for wardrobe shutters and painted or laminated surfaces.",
+      price: "2,500 – 3,500",
+      unit: "per sheet",
+      where: "Marriott Road / Jodia Bazar",
+      swatch: "board-mdf",
+    },
+    {
+      category: "Plywood & Boards",
+      name: "Block Board (8x4 ft)",
+      desc: "A solid-core board built from wood strips — strong enough for long wardrobe shelves and tabletops without warping.",
+      price: "4,500 – 6,000",
+      unit: "per sheet",
+      where: "Timber Market / Marriott Road",
+      swatch: "board-block",
+    },
+    {
+      category: "Plywood & Boards",
+      name: "Particle Board / Chipboard (8x4 ft)",
+      desc: "The most economical board — suited to low-budget furniture and parts that won't carry heavy weight.",
+      price: "2,000 – 3,000",
+      unit: "per sheet",
+      where: "Marriott Road / Jodia Bazar",
+      swatch: "board-particle",
+    },
+
+    // Laminate Sheets
+    {
+      category: "Laminate Sheets",
+      name: "Decorative Laminate / Sunmica (8x4 ft)",
+      desc: "The outer finish layer glued onto boards — gives wardrobes, kitchens, and doors their final look and colour.",
+      price: "1,200 – 3,000",
+      unit: "per sheet",
+      where: "Marriott Road / Jodia Bazar",
+      swatch: "laminate-swatches",
+    },
+
+    // Veneer
+    {
+      category: "Veneer",
+      name: "Natural Wood Veneer Sheet",
+      desc: "A thin real-wood layer for a premium, natural wood-grain look — used on feature panels and high-end furniture fronts.",
+      price: "150 – 400",
+      unit: "per sq ft",
+      where: "Timber Market (specialised dealers)",
+      swatch: "veneer",
+    },
+
+    // PVC & Acrylic
+    {
+      category: "PVC & Acrylic",
+      name: "High-Gloss Acrylic / PVC Sheet",
+      desc: "A modern, glossy finish popular for kitchen shutters — wipes clean easily and reflects light well in small kitchens.",
+      price: "200 – 450",
+      unit: "per sq ft",
+      where: "Marriott Road / Jodia Bazar",
+      swatch: "acrylic",
+    },
+
+    // Hardware
+    {
+      category: "Hardware",
+      name: "Hinges (Soft-Close)",
+      desc: "Cabinet and wardrobe door hinges — soft-close types shut quietly and last longer under daily use.",
+      price: "150 – 400",
+      unit: "per piece",
+      where: "Saddar Hardware Markets",
+      swatch: "hardware-hinge",
+    },
+    {
+      category: "Hardware",
+      name: "Drawer Channels (Telescopic)",
+      desc: "Sliding rails for kitchen and wardrobe drawers — smoother pull with less sag over time.",
+      price: "350 – 900",
+      unit: "per pair",
+      where: "Saddar Hardware Markets",
+      swatch: "hardware-channel",
+    },
+    {
+      category: "Hardware",
+      name: "Handles & Knobs",
+      desc: "Final touch on any wardrobe, drawer, or cabinet door — available in many finishes to match the interior.",
+      price: "100 – 500",
+      unit: "per piece",
+      where: "Saddar Hardware Markets",
+      swatch: "hardware-handle",
+    },
+    {
+      category: "Hardware",
+      name: "Locks (Cabinet / Almari)",
+      desc: "Standard locking hardware for wardrobes and cabinets.",
+      price: "300 – 1,200",
+      unit: "per piece",
+      where: "Saddar Hardware Markets",
+      swatch: "hardware-lock",
+    },
+
+    // Adhesives & Polish
+    {
+      category: "Adhesives & Polish",
+      name: "Wood Adhesive (Fevicol-type)",
+      desc: "Bonds laminate sheets to boards and joins wood pieces — the glue behind every strong joint.",
+      price: "400 – 700",
+      unit: "per kg",
+      where: "Timber Market / hardware stores",
+      swatch: "adhesive",
+    },
+    {
+      category: "Adhesives & Polish",
+      name: "Melamine Polish / Wood Varnish",
+      desc: "The protective top coat that gives furniture its shine and protects the wood underneath.",
+      price: "900 – 1,600",
+      unit: "per litre",
+      where: "Timber Market / hardware stores",
+      swatch: "polish",
+    },
+  ],
 };
 
 export default content;

@@ -6,6 +6,7 @@ import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Rates from "./pages/Rates.jsx";
+import Materials from "./pages/Materials.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Contact from "./pages/Contact.jsx";
 
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/rates" element={<Rates />} />
+          <Route path="/materials" element={<Materials />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
