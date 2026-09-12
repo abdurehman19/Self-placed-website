@@ -1,15 +1,7 @@
 import { useState, useMemo } from "react";
 import content from "../data/content.js";
+import GalleryIcon from "./Galleryicon.jsx";
 import "./Gallery.css";
-
-function WoodIcon() {
-  return (
-    <svg viewBox="0 0 48 48" width="30" height="30" fill="none" aria-hidden="true">
-      <rect x="6" y="10" width="36" height="28" rx="2" stroke="currentColor" strokeWidth="2" />
-      <path d="M6 18h36M6 26h36M16 10v28M32 10v28" stroke="currentColor" strokeWidth="1.4" opacity="0.5" />
-    </svg>
-  );
-}
 
 export default function Gallery() {
   const [active, setActive] = useState("Sab");
@@ -56,8 +48,8 @@ export default function Gallery() {
                   <img src={g.src} alt={g.label} loading="lazy" />
                 ) : (
                   <div className="gallery-tile__placeholder">
-                    <WoodIcon />
-                    <span>Photo add karein</span>
+                    <GalleryIcon category={g.category} />
+                    <span>Photo coming soon</span>
                   </div>
                 )}
                 <figcaption>
