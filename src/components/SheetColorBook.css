@@ -37,12 +37,14 @@
 /* ---- Swatch grid (the "book" of colours) ---- */
 .sheet-book__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 12px;
   background: var(--cream-light);
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 16px;
+  max-height: 620px;
+  overflow-y: auto;
 }
 
 .sheet-book__cell {
